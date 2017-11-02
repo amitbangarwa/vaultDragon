@@ -20,6 +20,7 @@ angular.module('vault', ['ngRoute', 'ngToast'])
             init();
             $http.get('/api/object').then(function successCallback(response) {
                 let data = response.data;
+                $scope.object = {};
                 $scope.showTable = true;
                 $scope.objects = data.data;
                 ngToast.create(data.message);
@@ -31,6 +32,7 @@ angular.module('vault', ['ngRoute', 'ngToast'])
             if (object.hasOwnProperty('value')) {
                 $http.post('/api/object', object).then(function successCallback(response) {
                     let data = response.data;
+                    $scope.object = {};
                     if (typeof data.data !== 'number') {
                         $scope.showTable = true;
                         $scope.objects = data.data;
@@ -42,6 +44,7 @@ angular.module('vault', ['ngRoute', 'ngToast'])
             } else {
                 $http.get('/api/object/' + object.key).then(function successCallback(response) {
                     let data = response.data;
+                    $scope.object = {};
                     $scope.showTable = true;
                     $scope.objects = data.data;
                     ngToast.create(data.message);
