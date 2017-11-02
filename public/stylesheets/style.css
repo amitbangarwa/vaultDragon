@@ -1,8 +1,42 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+    color: #00B7FF;
+}
+
+.ng-toast__list {
+    margin-right: 70px !important;
+}
+
+.button-group {
+    margin: 20px auto;
+}
+
+.object-form {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    margin: 20px auto;
+}
+
+@media (max-width: 767px) {
+    button {
+        margin: 10px auto;
+    }
+}
+
+@media (min-width: 767px) {
+    .object-form {
+        width: 500px;
+    }
+}
+
+table {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+table th {
+    text-align: center;
 }

@@ -1,0 +1,45 @@
+<h1 class="text-center">Welcome to Vault Dragon</h1>
+
+<div class="text-center button-group">
+    <button class="btn btn-primary" ng-click="getAll()">Get All Objects</button>
+    <button class="btn btn-primary" ng-click="toggle('key')">Get A Object</button>
+    <button class="btn btn-primary" ng-click="toggle()">Create A Object</button>
+</div>
+
+<div ng-show="showForm">
+    <form class="form-horizontal object-form" ng-submit="generic(object)">
+        <div class="form-group">
+            <label for="key" class="col-sm-2 control-label">Key</label>
+            <div class="col-sm-10">
+                <input autocomplete="off" type="text" ng-model="object.key" class="form-control" id="key" placeholder="Enter Key" required>
+            </div>
+        </div>
+        <div class="form-group" ng-show="showValueField">
+            <label for="value" class="col-sm-2 control-label">Value</label>
+            <div class="col-sm-10">
+                <input autocomplete="off" type="text" ng-model="object.value" class="form-control" id="value" placeholder="Enter Value">
+            </div>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+    </form>
+</div>
+
+
+<table class="table table-hover text-center" ng-show="showTable" ng-if="objects">
+    <thead>
+    <th>#</th>
+    <th>Key</th>
+    <th>Value</th>
+    <th>Created Time</th>
+    </thead>
+    <tbody>
+    <tr ng-repeat="object in objects">
+        <td>{{$index + 1}}</td>
+        <td>{{object.key}}</td>
+        <td>{{object.value}}</td>
+        <td>{{object.timestamp | date : 'medium'}}</td>
+    </tr>
+    </tbody>
+</table>

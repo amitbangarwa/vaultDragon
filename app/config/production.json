@@ -1,0 +1,8 @@
+{
+  "db": {
+    "url": "Production Url",
+    "collections": {
+      "objects": "objects"
+    }
+  }
+}
