@@ -8,7 +8,7 @@
 **Installation :**
 
     * Clone the Repo
-    * cd your directory
+    * cd vaultDragon
     * npm install
     * cd public
     * bower install
