@@ -25,7 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 require('./routes/routes')(app);
-require('./app/api/common')(app);
+require('./app/routes/common')(app);
 require('./app/db/connection')(app);
 
 
