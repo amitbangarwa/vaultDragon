@@ -4,6 +4,7 @@
 
     * Node.Js
     * ES6 syntax
+    * MongoDB
 
 **Installation :**
 
