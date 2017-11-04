@@ -21,7 +21,7 @@
 **To start production environment :**
 
     * change the config/production db url
-    * NODE_ENV=production npm start
+    * NODE_ENV=production node bin/www
 
 **To test the api :**
 
