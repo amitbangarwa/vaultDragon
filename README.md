@@ -18,7 +18,8 @@
 
     * npm start
 
-T**o start production environment :**
+**To start production environment :**
+
     * change the config/production db url
     * NODE_ENV=production npm start
 
